@@ -1,0 +1,18 @@
+:root {
+  --accent-green: rgba(0, 128, 0, 0.085);
+  --dark-green: rgb(0, 28, 0);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+body {
+  background-color: var(--dark-green);
+  font-family: sans-serif;
+  color: white;
+}
+
+.box {
+  width: 50%;
+}
