@@ -38,7 +38,7 @@ header {
 }
 
 #tuitane-logo {
-  max-height: 50px;
+  max-height: 4rem;
 }
 header nav a {
   padding: 10px 20px;
@@ -114,7 +114,10 @@ footer {
   display: flex;
   align-items: center;
 }
-
+.action ion-icon {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
 .action span {
   margin-left: 5px;
 }
