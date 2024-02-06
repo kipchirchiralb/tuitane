@@ -1,18 +1,143 @@
 :root {
-  --accent-green: rgba(0, 128, 0, 0.085);
-  --dark-green: rgb(0, 28, 0);
+  --accent-green: #50a0604c;
+  --green: #50a060;
+  --cta: #7b5502;
+
+  --padding: 20px 80px;
 }
 * {
   padding: 0;
   margin: 0;
   box-sizing: content-box;
+  transition: all 0.4s ease-in-out;
+}
+html {
+  font-size: 20px;
+}
+a {
+  text-decoration: none;
+  color: var(--green);
+}
+a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  color: var(--cta);
 }
 body {
-  background-color: var(--dark-green);
+  background-color: var(--accent-green);
   font-family: sans-serif;
-  color: white;
+  color: var(--green);
 }
 
-.box {
-  width: 50%;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding);
+}
+
+#tuitane-logo {
+  max-height: 50px;
+}
+header nav a {
+  padding: 10px 20px;
+}
+main {
+  padding: var(--padding);
+}
+h1 {
+  text-align: center;
+}
+.main-box {
+  width: 70%;
+  margin: 10px auto;
+}
+ion-icon {
+  color: var(--cta);
+}
+footer {
+  padding: var(--padding);
+}
+
+/* Style for post */
+.post {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Profile */
+.profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile .title {
+  margin: 0;
+}
+.profile .title span {
+  display: block;
+}
+.profile .follow-icon {
+  margin-left: auto;
+  margin-right: 30px;
+  font-size: 1.5rem;
+}
+.profile .username {
+  font-weight: bold;
+}
+
+.profile .position {
+  color: #666;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+}
+
+.action span {
+  margin-left: 5px;
+}
+
+.numbers {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.numbers span {
+  margin-right: 10px;
+}
+
+.likes,
+.comments {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.likes span,
+.comments span {
+  margin-right: 5px;
+  font-weight: bold;
 }
