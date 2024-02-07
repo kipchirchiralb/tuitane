@@ -158,5 +158,17 @@ footer {
   }
   .actions {
     gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .numbers {
+    margin-left: unset;
+  }
+  .numbers span {
+    margin-right: 5px;
+  }
+  .likes,
+  .comments {
+    margin-right: 5px;
   }
 }

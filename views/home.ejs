@@ -18,20 +18,12 @@
     ></script>
   </head>
   <body>
-    <header>
-      <a href="/">
-        <img src="images/logo.png" alt="tuitane logo" id="tuitane-logo" />
-      </a>
-      <nav>
-        <a href="/home">Home</a>
-        <a href="/profile">Profile</a>
-        <a href="/signup">Signup</a>
-        <a href="/login">Login</a>
-      </nav>
-    </header>
+    <!-- partials -->
+    <%- include("_header.ejs") %>
     <main>
       <h1>Karibu Tuitane</h1>
       <div class="main-box">
+        <% posts.forEach(post=>{ %>
         <div class="post">
           <div class="profile">
             <img src="images/user.jpg" alt="" />
@@ -41,12 +33,7 @@
             </p>
             <ion-icon name="person-add-outline" class="follow-icon"></ion-icon>
           </div>
-          <p class="body">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-            facilis libero tempora pariatur aperiam aliquid. Fuga cumque,
-            architecto, facilis assumenda debitis placeat in nostrum quae
-            voluptas possimus quaerat mollitia eveniet!
-          </p>
+          <p class="body"><%= post.content %></p>
           <div class="actions">
             <div class="action">
               <ion-icon name="thumbs-up-outline"></ion-icon>
@@ -68,118 +55,10 @@
             </div>
           </div>
         </div>
-        <div class="post">
-          <div class="profile">
-            <img src="images/user.jpg" alt="" />
-            <p class="title">
-              <span class="username">Albert Kipchirchir</span>
-              <span class="position">Software Developer</span>
-            </p>
-            <ion-icon name="person-add-outline" class="follow-icon"></ion-icon>
-          </div>
-          <p class="body">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-            facilis libero tempora pariatur aperiam aliquid. Fuga cumque,
-            architecto, facilis assumenda debitis placeat in nostrum quae
-            voluptas possimus quaerat mollitia eveniet!
-          </p>
-          <div class="actions">
-            <div class="action">
-              <ion-icon name="thumbs-up-outline"></ion-icon>
-              <span>Like</span>
-            </div>
-            <div class="action">
-              <ion-icon name="chatbubbles-outline"></ion-icon>
-              <span>Comment</span>
-            </div>
-            <div class="numbers">
-              <div class="likes">
-                <span>57</span>
-                <span>Likes</span>
-              </div>
-              <div class="comments">
-                <span>7</span>
-                <span>Comments</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="post">
-          <div class="profile">
-            <img src="images/user.jpg" alt="" />
-            <p class="title">
-              <span class="username">Albert Kipchirchir</span>
-              <span class="position">Software Developer</span>
-            </p>
-            <ion-icon name="person-add-outline" class="follow-icon"></ion-icon>
-          </div>
-          <p class="body">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-            facilis libero tempora pariatur aperiam aliquid. Fuga cumque,
-            architecto, facilis assumenda debitis placeat in nostrum quae
-            voluptas possimus quaerat mollitia eveniet!
-          </p>
-          <div class="actions">
-            <div class="action">
-              <ion-icon name="thumbs-up-outline"></ion-icon>
-              <span>Like</span>
-            </div>
-            <div class="action">
-              <ion-icon name="chatbubbles-outline"></ion-icon>
-              <span>Comment</span>
-            </div>
-            <div class="numbers">
-              <div class="likes">
-                <span>57</span>
-                <span>Likes</span>
-              </div>
-              <div class="comments">
-                <span>7</span>
-                <span>Comments</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="post">
-          <div class="profile">
-            <img src="images/user.jpg" alt="" />
-            <p class="title">
-              <span class="username">Albert Kipchirchir</span>
-              <span class="position">Software Developer</span>
-            </p>
-            <ion-icon name="person-add-outline" class="follow-icon"></ion-icon>
-          </div>
-          <p class="body">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-            facilis libero tempora pariatur aperiam aliquid. Fuga cumque,
-            architecto, facilis assumenda debitis placeat in nostrum quae
-            voluptas possimus quaerat mollitia eveniet!
-          </p>
-          <div class="actions">
-            <div class="action">
-              <ion-icon name="thumbs-up-outline"></ion-icon>
-              <span>Like</span>
-            </div>
-            <div class="action">
-              <ion-icon name="chatbubbles-outline"></ion-icon>
-              <span>Comment</span>
-            </div>
-            <div class="numbers">
-              <div class="likes">
-                <span>57</span>
-                <span>Likes</span>
-              </div>
-              <div class="comments">
-                <span>7</span>
-                <span>Comments</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <% }) %>
+        <!-- get name of the user/owner for each post -->
       </div>
     </main>
-    <footer>
-      <p>Copyright &copy; <%=new Date().getFullYear()%></p>
-    </footer>
+    <%- include("_footer.ejs") %>
   </body>
 </html>
